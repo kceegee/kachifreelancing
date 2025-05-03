@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kachi's Freelancing Service</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<script>
+  function toggleMenu() {
+    const navLinks = document.getElementById("navLinks");
+    navLinks.classList.toggle("show");
+  }
+</script>
+<body>
+
+  <!-- Navigation -->
+<nav>
+  <div class="logo">Kachi Services</div>
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#portfolio">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#payment">Payment</a></li>
+  </ul>
+</nav>
+
+  <!-- Hero Section with Slideshow -->
+<header>
+  <div class="slideshow-container">
+    <div class="slide fade">
+      <img src="images/image1.jpg" alt="Freelancing Work 1">
+      <div class="text">Kachi's Freelancing Service</div>
+    </div>
+
+    <div class="slide fade">
+      <img src="images/image2.jpg" alt="Freelancing Work 2">
+      <div class="text">I help in all tech work</div>
+    </div>
+
+    <div class="slide fade">
+      <img src="images/image3.jpg" alt="Freelancing Work 3">
+      <div class="text">Reach out — it's really cheap!</div>
+    </div>
+  </div>
+</header>
+
+
+  <!-- Services Section -->
+  <section id="services">
+    <h2>My Services</h2>
+    <ul>
+      <li>Email and social media account recovery</li>
+      <li>Ethical hacking (white hat only)</li>
+      <li>Mobile app development</li>
+      <li>Website creation</li>
+      <li>Tech support</li>
+    </ul>
+  </section>
+
+  <!-- Demo Projects -->
+  <section id="portfolio">
+    <h2>Successful Projects</h2>
+    <ul>
+      <li><strong>Instagram Account Recovered:</strong> Helped a client recover their business IG in 2 hours.</li>
+      <li><strong>Mobile App for Business:</strong> Developed an e-commerce app now on Google Play.</li>
+      <li><strong>Website Creation:</strong> Designed a fast-loading business site for a client in Lagos.</li>
+    </ul>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p><strong>Phone:</strong> 08115069610</p>
+    <p><strong>WhatsApp:</strong> 09138997535</p>
+    <p><strong>Email:</strong> agadakachibusiness@gmail.com</p>
+    <p><strong>Location:</strong> Abuja, Nigeria</p>
+  </section>
+
+  <!-- Payment Options -->
+  <section id="payment">
+    <h2>Payment Methods</h2>
+    <p>Accepting payments through:</p>
+    <ul>
+      <li>CashApp</li>
+      <li>PalmPay</li>
+    </ul>
+    <p><em>More payment options coming soon (e.g., Paystack integration).</em></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Kachi's Freelancing Service. All rights reserved.</p>
+  </footer>
+
+</body>
+
+<script>
+  let slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    const slides = document.getElementsByClassName("slide");
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1 }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 3000); // Change image every 3 seconds
+  }
+</script>
+
+</html>
